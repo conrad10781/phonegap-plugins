@@ -11,6 +11,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+// Import your.package.R here
+import us.rcs.localnotifications.R;
+
 /**
  * The alarm receiver is triggered when a scheduled alarm is fired. This class
  * reads the information in the intent and displays this information in the
@@ -18,6 +21,7 @@ import android.util.Log;
  * sound and it vibrates the phone.
  * 
  * @author dvtoever
+ * @author Matthew C. Rice <mrice@rcs.us>
  */
 public class AlarmReceiver extends BroadcastReceiver {
 

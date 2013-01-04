@@ -9,6 +9,7 @@ import org.json.JSONObject;
  * Class that helps to store the options that can be specified per alarm.
  * 
  * @author dvtoever
+ * @author Matthew C. Rice <mrice@rcs.us>
  */
 public class AlarmOptions {
 

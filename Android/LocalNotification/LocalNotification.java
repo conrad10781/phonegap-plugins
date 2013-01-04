@@ -9,8 +9,8 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.util.Log;
 
-import com.phonegap.api.Plugin;
-import com.phonegap.api.PluginResult;
+import org.apache.cordova.api.Plugin;
+import org.apache.cordova.api.PluginResult;
 
 /**
  * This plugin utilizes the Android AlarmManager in combination with StatusBar
@@ -19,7 +19,9 @@ import com.phonegap.api.PluginResult;
  * in the Android status bar.
  * 
  * @author Daniel van 't Oever
+ * @author Matthew C. Rice <mrice@rcs.us>
  */
+@SuppressWarnings("deprecation")
 public class LocalNotification extends Plugin {
 
     public static final String PLUGIN_NAME = "LocalNotification";
@@ -30,9 +32,10 @@ public class LocalNotification extends Plugin {
      */
     private AlarmHelper alarm = null;
 
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public PluginResult execute(String action, JSONArray optionsArr, String callBackId) {
-	alarm = new AlarmHelper(this.ctx);
+	alarm = new AlarmHelper(this.cordova.getContext());
 	Log.d(PLUGIN_NAME, "Plugin execute called with action: " + action);
 
 	PluginResult result = null;

@@ -19,6 +19,7 @@ import android.util.Log;
  * @see AlarmRestoreOnBoot
  * 
  * @author dvtoever
+ * @author Matthew C. Rice <mrice@rcs.us>
  */
 public class AlarmHelper {
 

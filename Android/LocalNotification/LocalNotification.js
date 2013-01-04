@@ -2,6 +2,7 @@
  * Phonegap LocalNotification Plugin for Android
  * 
  * Created by Daniel van 't Oever 2012 MIT Licensed
+ * Updated by Matthew C. Rice 2013
  * 
  * Usage: 
  * 
@@ -11,13 +12,13 @@
  * 
  * This interface is similar to the existing iOS LocalNotification plugin created by Greg Allen
  */
-if (typeof PhoneGap !== "undefined") {
-
+cordova.define("cordova/plugin/localNotification", function(require, exports, module) {
+	var exec = require('cordova/exec');
+	
 	/**
 	 * Empty constructor
 	 */
-	var LocalNotification = function() {
-	};
+	var LocalNotification = function() {};
 
 	/**
 	 * Register a notification message for a specific date / time
@@ -71,13 +72,6 @@ if (typeof PhoneGap !== "undefined") {
 		PhoneGap.exec(null, null, 'LocalNotification', 'cancelAll', new Array());
 	};
 
-	/**
-	 * Register this plugin with phonegap
-	 */
-	PhoneGap.addConstructor(function() {
-		if (!window.plugins) {
-			window.plugins = {};
-		}
-		window.plugins.localNotification = new LocalNotification();
-	});
-}
+	 var localNotification = new LocalNotification();
+	 module.exports = localNotification;
+});

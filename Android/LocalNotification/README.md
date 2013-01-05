@@ -21,8 +21,12 @@ This is an update to https://github.com/phonegap/phonegap-plugins/tree/master/An
     
     The first part tells Android to launch the AlarmReceiver class when the alarm is be triggered. This will also work when the application is not running.
 	The second part restores all added alarms upon device reboot (because Android 'forgets' all alarms after a restart).
+
+7. Add the following permission in the AndroidManifest.xml:
+
+        <uses-permission android:name="android.permission.VIBRATE" />
 	
-7. The following piece of code is a minimal example in which you can test the notification:
+8. The following piece of code is a minimal example in which you can test the notification:
 
       	<script type="text/javascript">
 
@@ -46,10 +50,10 @@ This is an update to https://github.com/phonegap/phonegap-plugins/tree/master/An
                 document.addEventListener("deviceready", appReady, false);
         </script>
 		
-8. You can use the following commands:
+9. You can use the following commands:
 
 	- window.plugins.LocalNotificationPlugin.add({ date: new Date(), message: 'This is an Android alarm using the statusbar', id: 123 });
 	- window.plugins.LocalNotificationPlugin.cancel(123); 
 	- window.plugins.LocalNotificationPlugin.cancelAll();
 		
-9. Enjoy. Matthew
+10. Enjoy. Matthew

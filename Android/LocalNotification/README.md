@@ -1,5 +1,7 @@
 This is an update to https://github.com/phonegap/phonegap-plugins/tree/master/Android/LocalNotification. This version supports 2.x+, where the previous version was &lt; 2.x.
 
+*Note, this version currently supports 2.0.X - 2.1.X. The prototype of the execute function in the CordovaPlugin class has changed as of 2.2.X*
+
 1. Copy the LocalNotification.js file to your 'www' folder and include it in your index.html
 2. Create a package com.phonegap.plugin.localnotification
 3. Copy the .java files into this package
